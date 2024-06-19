@@ -8,11 +8,11 @@
 /* Start Fonts */
 @font-face {
   font-family: main-head;
-  src: url("/fonts/Rubik/static/Rubik-Bold.ttf");
+  src: url("../fonts/Rubik/static/Rubik-Bold.ttf");
 }
 @font-face {
   font-family: main-p;
-  src: url("/fonts/Open_Sans/static/OpenSans-Medium.ttf");
+  src: url("../fonts/Open_Sans/static/OpenSans-Medium.ttf");
 }
 /* End Fonts */
 
@@ -205,12 +205,9 @@ html{
 .landing .container{
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  height: 100vh;
-  width: 97%;  
-}
-.landing .container .land-text{
-  
+  height: 100vh;  
 }
 .landing .container .land-text h2{
   width: 100%;
@@ -226,7 +223,8 @@ html{
   font-family: main-p;
   margin: 10px 0;
   font-size: .9rem;
-  color: rgba(0, 0, 0, .4)
+  color: rgba(0, 0, 0, .4);
+  max-width: 500px;
 }
 .landing .container .land-text button{
   padding: .8rem 1.3rem;
@@ -256,11 +254,15 @@ html{
   }
   .landing .container .land-text h2{
     margin: 10px 0;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
   }
   .landing .container .land-text p{
     line-height: 1.6;
-    font-size: .8rem;
+    font-size: .9rem;
+  }
+  .landing .container .land-text button{
+    padding: 1rem 1.6rem;
+    font-size: 18px;
   }
   .landing .container img{
     height: 250px;
@@ -316,12 +318,12 @@ html{
 /* End Features */
 /* Start About*/
 .about{
-  margin:100px 0;
+  margin:100px auto;
 }
 .about .container {
-  margin: 100px 0; 
+  margin: 100px auto; 
   display: flex;
-  
+  justify-content: center;
   align-items: center;
   
 }
@@ -338,7 +340,8 @@ html{
   font-family: main-p;
   color: rgba(0, 0, 0, .5);
   line-height: 1.6;
-  font-size: .9rem
+  font-size: .9rem;
+  max-width: 600px;
 }
 .about .container img{
   border-radius: 10px;
@@ -354,14 +357,14 @@ html{
     text-align: center;
   }
   .about .container .about-text h2{
-    font-size: 1.8rem
+    font-size: 2rem
   }
   .about .container .about-text p{
-    font-size: .8rem
+    font-size: 1rem
   }
   .about .container img{
     margin-top:10px;
-    height: 200px;
+    height: 270px;
     
   }
 }
@@ -374,13 +377,13 @@ html{
   font-family: main-head;
   font-size: 2.5rem;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 5px;
   color: var(--secondry-color);
 }
 .contact .container .contact-sec{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  align-items: center
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact .container .contact-sec img{
   height:300px;
@@ -438,6 +441,9 @@ html{
   outline: none;
 }
 @media (max-width: 767px) {
+  .contact .container .contact-sec {
+    flex-direction: column;
+  }
   .contact .container h2{
     font-size: 1.8rem
   }
@@ -451,7 +457,7 @@ html{
     
     width: 100%;
   }
-  
+
 }
 
 /* End contact*/
